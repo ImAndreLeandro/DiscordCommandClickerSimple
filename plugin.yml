@@ -1,0 +1,6 @@
+name: DiscordCommandClickerSimple
+main: net.imandreleandro.discordcmdsimple.Main
+version: 1.0
+author: ImAndreLeandro
+commands:
+  discord:
