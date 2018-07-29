@@ -1,5 +1,6 @@
 package net.imandreleandro.discordcmdsimple;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,8 +19,11 @@ public class cmdDiscord implements CommandExecutor {
 			Player p = (Player) sender;
 			
 			String a = Main.getInstance().getConfig().getString("Message");
+			a = ChatColor.translateAlternateColorCodes('&', a);
 			String b = Main.getInstance().getConfig().getString("Url_Message");
+			b = ChatColor.translateAlternateColorCodes('&', b);
 			String c = Main.getInstance().getConfig().getString("Url");
+			c = ChatColor.translateAlternateColorCodes('&', c);
 			
 			TextComponent msg = new TextComponent(a);
 			msg.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(b).create()));
